@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ChessGame-Works but not recursive:jar">
+    <output-path>$PROJECT_DIR$/out</output-path>
+    <root id="archive" name="ChessGame-Works but not recursive.jar">
+      <element id="module-output" name="ChessGame-Works but not recursive" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
