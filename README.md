@@ -28,6 +28,6 @@ Once the desired board state to analyze has been reached, press the power button
 
 ![](https://github.com/SagarsGitHub/Chess_Analyzer/blob/master/src/ReadME%20Documentation/Average%20Board%20State.png)
 
-This program is meant to give a more qualitative analysis of the board state than t he standard chess engine. The results of the analysis will not give any specific hints as to what the next best move is, but the threat levels of each square might let a user know where to focus their efforts.
+This program is meant to give a more qualitative analysis of the board state than the standard chess engine. The results of the analysis will not give any specific hints as to what the next best move is, but the threat levels of each square might let a user know where to focus their efforts.
 
 Hope this program helps make your next chess game a more interesting one!
