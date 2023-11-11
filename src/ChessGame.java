@@ -31,7 +31,10 @@ import javax.swing.JPanel;
  * - implement method to recursively analyze moves that doesn't get stuck
  * - break out things into smaller functions
  * - separate pieces into json file/ external format to populate board cleanly (look into json, xml, or csv)
- *
+ * - NEW***
+ * - Expand on threat level calculation logic -- analyze for multiple future moves of selected piece and visualize
+ * alterate futures to user, potentially multiple boards rendered at once
+ * - Simple improvement: "Show validate moves for selected piece" functionality
  */
 
 // simple chess engine that determines what color controls each square displayed on a simple gui.
@@ -54,13 +57,13 @@ public class ChessGame {
     public static void main(String[] args) throws IOException {
 
         // import images
-        BufferedImage all=ImageIO.read(new File("D:\\Coding_Projects\\ChessGame-Works but not recursive\\src\\chess.png"));
+        BufferedImage all=ImageIO.read(new File("src/chess.png"));
 
         Image[] pieceImages =new Image[12];
-        Image trashIcon = ImageIO.read(new File("D:\\Coding_Projects\\ChessGame-Works but not recursive\\src\\trash.png")).getScaledInstance(64, 64, BufferedImage.SCALE_SMOOTH);
-        Image clearIcon = ImageIO.read(new File("D:\\Coding_Projects\\ChessGame-Works but not recursive\\src\\clear.png")).getScaledInstance(64, 64, BufferedImage.SCALE_SMOOTH);
-        Image startIcon = ImageIO.read(new File("D:\\Coding_Projects\\ChessGame-Works but not recursive\\src\\start.png")).getScaledInstance(64, 64, BufferedImage.SCALE_SMOOTH);
-        Image closeIcon = ImageIO.read(new File("D:\\Coding_Projects\\ChessGame-Works but not recursive\\src\\close.png")).getScaledInstance(64, 64, BufferedImage.SCALE_SMOOTH);
+        Image trashIcon = ImageIO.read(new File("src/trash.png")).getScaledInstance(64, 64, BufferedImage.SCALE_SMOOTH);
+        Image clearIcon = ImageIO.read(new File("src/clear.png")).getScaledInstance(64, 64, BufferedImage.SCALE_SMOOTH);
+        Image startIcon = ImageIO.read(new File("src/start.png")).getScaledInstance(64, 64, BufferedImage.SCALE_SMOOTH);
+        Image closeIcon = ImageIO.read(new File("src/close.png")).getScaledInstance(64, 64, BufferedImage.SCALE_SMOOTH);
 
         // cut chess png into separate icons and store in an array
         int ind=0;
